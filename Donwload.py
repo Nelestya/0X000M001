@@ -1,3 +1,4 @@
+#!/usr/bin/python3.4
 from __future__ import unicode_literals
 import youtube_dl
 
@@ -13,6 +14,8 @@ class MyLogger(object):
         print(msg)
 
 class Downloadmp3():
+    """Class for download webm and convert mp3 in youtube"""
+
     def __init__(self, url):
         self.options = {
             'format': 'bestaudio/best',
@@ -27,7 +30,9 @@ class Downloadmp3():
         with youtube_dl.YoutubeDL(self.options) as ydl:
             ydl.download([url])
 
-    
+
+###########################################################
+#TEST PHASE
 
 if __name__ == "__main__":
     Downloadmp3("https://www.youtube.com/watch?v=tolm-07if3c")
