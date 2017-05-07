@@ -13,7 +13,7 @@ class App():
         """Create te windows for app with Gtk"""
 
         self.builder = Gtk.Builder()
-        self.builder.add_from_file("TLS_Client.glade")
+        self.builder.add_from_file("windowsDlmp3.glade")
         self.builder.connect_signals(self)
 
         ####################################################
@@ -34,6 +34,10 @@ class App():
     def on_buttondownload_clicked(self, widget):
         """Event if the button clicked"""
         print(self.entry1.get_text())
+        try:
+            pass
+        except Exception as e:
+            raise
 
     def on_window1_delete_event(self, *args):
         """Event if clicked exit"""
