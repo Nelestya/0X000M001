@@ -33,8 +33,8 @@ class App():
 
     def on_buttondownload_clicked(self, widget):
         """Event if the button clicked"""
-        print(self.entry1.get_text())
         try:
+            Download.Downloadmp3(self.entry1.get_text())
             pass
         except Exception as e:
             raise
@@ -45,7 +45,7 @@ class App():
 
 
 ###########################################################
-#TEST PHASE
+#Main
 if __name__ == "__main__":
     App()
     Gtk.main()
