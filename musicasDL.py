@@ -35,6 +35,7 @@ class App():
         """Event if the button clicked"""
         try:
             Download.Downloadmp3(self.entry1.get_text())
+            Download.Downloadmp3.movefile("Download")
             pass
         except Exception as e:
             raise
