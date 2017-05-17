@@ -1,4 +1,5 @@
 #!/usr/bin/python3.4
+#-*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import youtube_dl
 import os
@@ -55,6 +56,6 @@ class Downloadmp3():
 #TEST PHASE
 
 if __name__ == "__main__":
-    
+
     Downloadmp3("https://www.youtube.com/watch?v=sB8H-lyegUc")
     Downloadmp3.movefile("Test")
